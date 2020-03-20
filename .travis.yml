@@ -1,6 +1,6 @@
-language: go
+language: python
 
-go: 1.8.1
+python: 3.6
 
 services:
   - docker
@@ -8,7 +8,7 @@ services:
 before_install:
   - docker build    -t isulad -f ./Dockerfile .
   - docker images
-  - docker run -tid --name isulad_con -v /var/lib/isulad:/var/lib/isulad -v `pwd`:/src/isulad --privileged isulad  bash -c "cd /src/isulad; mkdir build; cd build; cmake .."
+  - docker run -tid --name isulad_con -v /var/lib/isulad:/var/lib/isulad -v `pwd`:/src/isulad --privileged isulad
 
 branches:
   only:
