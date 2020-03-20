@@ -10,14 +10,6 @@ before_install:
   - docker images
   - docker run -tid --name isulad_con -v /var/lib/isulad:/var/lib/isulad -v `pwd`:/src/isulad --privileged isulad  bash -c "cd /src/isulad; mkdir build; cd build; cmake .."
 
-notifications:
-
-  email:
-    recipients:      
-      - apurva.dhoble@click2cloud.net
-  
-    on_success: always
-    on_failure: always
 	
 branches:
   only:
