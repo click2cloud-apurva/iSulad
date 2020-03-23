@@ -1,7 +1,5 @@
 language: c
 
-python: 3.6
-
 services:
   - docker
 
